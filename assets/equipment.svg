@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Original generic vector placeholders. These are not photographs or depictions of specific models. -->
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#fcfcf8"/><stop offset="1" stop-color="#d2d6cd"/></linearGradient>
+    <linearGradient id="dark-body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#515c50"/><stop offset="1" stop-color="#293429"/></linearGradient>
+    <pattern id="grille" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1h5" stroke="#697464" stroke-width="1"/></pattern>
+    <pattern id="fine" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 1h4" stroke="#6b7365" stroke-width=".7"/></pattern>
+    <symbol id="fan" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#3e493d"/><g fill="#77816e"><path d="M50 49C30 42 24 19 43 10c11-5 21 6 16 19z"/><path d="M51 50c15-16 39-17 43 4 3 12-11 19-23 11z"/><path d="M50 51c4 22-10 41-28 29-10-7-6-22 8-27z"/></g><g fill="none" stroke="#929b88" stroke-width=".65"><circle cx="50" cy="50" r="42"/><circle cx="50" cy="50" r="36"/><circle cx="50" cy="50" r="29"/><circle cx="50" cy="50" r="22"/><path d="M50 3v94M3 50h94M17 17l66 66M17 83l66-66"/></g><circle cx="50" cy="50" r="9" fill="#bbc1b3"/><circle cx="50" cy="50" r="5" fill="#788370"/></symbol>
+    <symbol id="heat-pump" viewBox="0 0 360 220">
+      <ellipse cx="183" cy="180" rx="119" ry="11" fill="#283d2710"/>
+      <path d="M79 73l43-25h167v110l-44 25H79z" fill="url(#body)" stroke="#a9b19f"/>
+      <path d="M79 73h166l44-25H122z" fill="#f3f5ee" stroke="#b7bfae"/>
+      <path d="M245 73l44-25v110l-44 25z" fill="#bbc3b3" stroke="#a9b19f"/>
+      <path d="M257 82l22-13v77l-22 13z" fill="url(#grille)"/>
+      <path d="M88 82h147v92H88z" fill="#d6dbcf" stroke="#bac1b1"/>
+      <use href="#fan" x="97" y="88" width="81" height="81"/>
+      <path d="M188 88h37v77h-37z" fill="url(#fine)"/>
+      <path d="M100 183v8h21v-8M211 183v8h21v-8" fill="#525e4d"/>
+      <path d="M186 105h32" stroke="#a6ae9c" stroke-width="2"/>
+      <circle cx="233" cy="79" r="1.3" fill="#a1362d"/>
+    </symbol>
+    <symbol id="ac" viewBox="0 0 360 220">
+      <ellipse cx="180" cy="166" rx="127" ry="10" fill="#283d270c"/>
+      <path d="M51 87l19-20h238l-15 20v61H51z" fill="url(#body)" stroke="#b5bdae"/>
+      <path d="M293 87l15-20v60l-15 21z" fill="#c1c8b8" stroke="#b1bba8"/>
+      <path d="M51 87h242" stroke="#fff"/>
+      <path d="M61 126h222v16H61z" fill="#68735d"/>
+      <path d="M63 132h218M63 136h218" stroke="#b4bea7" stroke-width="2"/>
+      <path d="M65 148q103 12 212 0" fill="none" stroke="#a2ad96"/>
+      <path d="M66 94h210" stroke="#e6eae0"/>
+      <path d="M255 116h10" stroke="#5c6b50" stroke-width="2"/>
+      <g fill="none" stroke="#9fac92" stroke-width="1" opacity=".6"><path d="M112 156q-5 17-14 23M175 158v24M238 156q5 17 14 23"/></g>
+    </symbol>
+    <symbol id="boiler" viewBox="0 0 360 220">
+      <ellipse cx="185" cy="195" rx="70" ry="7" fill="#283d2710"/>
+      <path d="M132 52l20-13h79v137l-20 12h-79z" fill="url(#body)" stroke="#aab5a1"/>
+      <path d="M211 52l20-13v137l-20 12z" fill="#c2cbb8" stroke="#aab5a1"/>
+      <path d="M132 52h79l20-13h-79z" fill="#f1f3ec" stroke="#bac4b0"/>
+      <path d="M166 39V25h22v14" fill="#d0d6c7" stroke="#aab5a1"/>
+      <path d="M141 143h61v32h-61z" fill="#d9dfd0"/>
+      <rect x="151" y="150" width="26" height="12" rx="1" fill="#4a5942"/>
+      <path d="M157 155h13" stroke="#acbc9c" stroke-width="1"/>
+      <circle cx="189" cy="156" r="5" fill="#f2f4ed" stroke="#98a58b"/>
+      <path d="M149 188v10M171 188v10M192 188v10" stroke="#8c9980" stroke-width="5"/>
+      <path d="M144 77h55" stroke="#e5eae0"/>
+      <path d="M153 131h40" stroke="#9aa78e" stroke-width="2"/>
+    </symbol>
+    <symbol id="water-pump" viewBox="0 0 360 220">
+      <ellipse cx="180" cy="184" rx="110" ry="9" fill="#283d2710"/>
+      <path d="M99 119c0-30 22-43 49-43h80c29 0 41 20 41 43v39H99z" fill="url(#dark-body)" stroke="#64725b"/>
+      <path d="M99 119c0-28 22-42 43-42v81H99z" fill="#68795d"/>
+      <path d="M111 111h18v37h-18z" fill="url(#grille)"/>
+      <path d="M147 86v-9q0-15 15-15h31q15 0 15 15v9" fill="none" stroke="#64735a" stroke-width="9"/>
+      <path d="M156 79v-4q0-5 7-5h28q7 0 7 5v4" fill="none" stroke="#d9e0d0" stroke-width="3"/>
+      <path d="M100 158h171v17H100z" fill="#404d39"/>
+      <path d="M112 175v8h25v-8M234 175v8h25v-8" fill="#64725a"/>
+      <path d="M270 123h23v24h-23" fill="#9ba38b" stroke="#7e8b6f"/>
+      <path d="M91 131H72v22h27" fill="#9ba38b" stroke="#7e8b6f"/>
+      <rect x="181" y="96" width="59" height="29" rx="3" fill="#202b20"/>
+      <g fill="#a4b78f"><circle cx="192" cy="108" r="2"/><path d="M202 106h24v3h-24zM202 112h17v3h-17z"/></g>
+    </symbol>
+    <symbol id="welding" viewBox="0 0 360 220">
+      <ellipse cx="179" cy="191" rx="111" ry="9" fill="#283d2710"/>
+      <path d="M90 180V69q0-15 13-20V34h14v15q13 5 13 20v111q-20 7-40 0" fill="#8b9b7e" stroke="#66775a"/>
+      <path d="M144 180V83q0-15 13-20V48h14v15q13 5 13 20v97q-20 7-40 0" fill="#c6ceb9" stroke="#96a486"/>
+      <path d="M98 34h24M109 34V22h13" fill="none" stroke="#5c6c50" stroke-width="4"/>
+      <path d="M151 48h25M164 48V35h13" fill="none" stroke="#5c6c50" stroke-width="4"/>
+      <path d="M92 86h36M146 96h36" stroke="#5d7050" stroke-width="11"/>
+      <path d="M194 116l20-13h60v71l-20 13h-60z" fill="#9f4639" stroke="#7b362c"/>
+      <path d="M254 116l20-13v71l-20 13z" fill="#72342b"/>
+      <path d="M194 116h60l20-13h-60z" fill="#ba6556"/>
+      <path d="M214 107v-9h30v9" fill="none" stroke="#38442f" stroke-width="5"/>
+      <rect x="201" y="127" width="26" height="12" fill="#323c2c"/><circle cx="241" cy="132" r="5" fill="#d1d2bd"/>
+      <path d="M201 153h46M201 158h46M201 163h46M201 168h46" stroke="#632c25" stroke-width="2"/>
+      <path d="M202 181q-22 23-47 10q-15-7 1-16" fill="none" stroke="#5d6550" stroke-width="3"/>
+    </symbol>
+    <symbol id="refrigeration" viewBox="0 0 360 220">
+      <ellipse cx="180" cy="181" rx="112" ry="10" fill="#283d2710"/>
+      <g fill="none" stroke="#9d7657" stroke-width="9"><ellipse cx="123" cy="141" rx="49" ry="30"/><ellipse cx="123" cy="133" rx="49" ry="30"/><ellipse cx="123" cy="125" rx="49" ry="30"/></g>
+      <g fill="none" stroke="#c2a383" stroke-width="1.5"><ellipse cx="123" cy="139" rx="49" ry="30"/><ellipse cx="123" cy="131" rx="49" ry="30"/><ellipse cx="123" cy="123" rx="49" ry="30"/></g>
+      <path d="M123 95V76h27" fill="none" stroke="#aa8362" stroke-width="7"/>
+      <path d="M191 124h94v16h-94z" fill="#a5b099" stroke="#6c7e5f"/>
+      <circle cx="210" cy="101" r="23" fill="#d8dfd0" stroke="#596d4b" stroke-width="4"/>
+      <circle cx="265" cy="101" r="23" fill="#d8dfd0" stroke="#975047" stroke-width="4"/>
+      <g fill="none" stroke="#5f6b53" stroke-width="1"><path d="M194 101h4m12-16v5m16 11h-4m-12 16v-5M249 101h4m12-16v5m16 11h-4m-12 16v-5"/><path d="M210 101l9-10M265 101l-11-5" stroke-width="2"/></g>
+      <path d="M206 140q-8 57 15 47q16-6 15-41" fill="none" stroke="#6b7e60" stroke-width="5"/>
+      <path d="M271 140q12 52-11 48q-15-3-15-42" fill="none" stroke="#a65f51" stroke-width="5"/>
+      <path d="M237 138v22" stroke="#a28a65" stroke-width="6"/>
+    </symbol>
+    <symbol id="hero-system" viewBox="0 0 720 600">
+      <ellipse cx="385" cy="460" rx="250" ry="27" fill="#45523b0d"/>
+      <!-- Generic upright indoor module, no manufacturer identity. -->
+      <path d="M467 164l66-35h80v271l-64 38h-82z" fill="url(#body)" stroke="#acb7a0" stroke-width="1.4"/>
+      <path d="M549 164l64-35v271l-64 38z" fill="#bfc9b5" stroke="#a1af93" stroke-width="1.2"/>
+      <path d="M467 164h82l64-35h-80z" fill="#eff2e9" stroke="#b2bda7"/>
+      <path d="M479 180h58v239h-58z" fill="#e6eadf" stroke="#ced6c4"/>
+      <path d="M480 315h55" stroke="#b7c2ac"/>
+      <rect x="492" y="325" width="30" height="20" rx="1" fill="#4d5a43"/>
+      <path d="M498 331h17M498 335h11" stroke="#bbcbaa" stroke-width="1"/>
+      <circle cx="526" cy="335" r="2" fill="#80956d"/>
+      <path d="M489 438v9h14v-9M527 438v9h14v-9" fill="#68775b"/>
+      <path d="M563 197l37-21v75l-37 21z" fill="url(#grille)" opacity=".5"/>
+      <!-- Generic outdoor module in three-quarter perspective. -->
+      <path d="M115 285l85-49h291v188l-85 49H115z" fill="url(#body)" stroke="#a4b097" stroke-width="1.5"/>
+      <path d="M115 285h291l85-49H200z" fill="#f5f6ef" stroke="#b4bfaa"/>
+      <path d="M406 285l85-49v188l-85 49z" fill="#b6c2aa" stroke="#9cab8e"/>
+      <path d="M423 300l50-29v130l-50 29z" fill="url(#grille)" stroke="#9eaf90"/>
+      <path d="M128 300h265v158H128z" fill="#d0d8c5" stroke="#bac5ac"/>
+      <use href="#fan" x="139" y="310" width="137" height="137"/>
+      <path d="M292 310h85v137h-85z" fill="url(#fine)"/>
+      <path d="M293 351h82" stroke="#a4b198" stroke-width="4"/>
+      <path d="M146 473v14h37v-14M354 473v14h37v-14" fill="#58674c"/>
+      <circle cx="393" cy="293" r="2" fill="#9b342d"/>
+      <g stroke="#8b9b7a" stroke-width="1" fill="none"><path d="M98 286v188M92 286h12M92 474h12"/><path d="M122 507h280M122 501v12M402 501v12"/><path d="M557 112h57M607 106v12"/></g>
+      <g fill="#758567" font-family="monospace" font-size="8"><text x="241" y="524">OPREMA / SISTEM / PRIMENA</text></g>
+    </symbol>
+    <symbol id="technology-pump" viewBox="0 0 600 490"><g transform="translate(-20 -15) scale(.93)"><use href="#hero-system" width="720" height="600"/></g></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M7 3H4a1 1 0 0 0-1 1c0 9 8 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a15 15 0 0 1-7-7l2-2z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="plan" viewBox="0 0 60 60"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 8h35v43H9zM17 17h12v13H17zM17 30v13h18V29h9M29 22h15M31 8v9M9 37h8M35 43h9"/><path d="M40 48l12-15 4 3-12 15-6 3z"/></g></symbol>
+    <symbol id="heating" viewBox="0 0 60 60"><g fill="none" stroke="currentColor" stroke-width="1.4"><rect x="10" y="19" width="8" height="28" rx="3"/><rect x="18" y="19" width="8" height="28" rx="3"/><rect x="26" y="19" width="8" height="28" rx="3"/><rect x="34" y="19" width="8" height="28" rx="3"/><path d="M42 24h7v-8h5M10 41H6v12h12M14 13q-4-3 0-7M26 13q-4-3 0-7M38 13q-4-3 0-7"/></g></symbol>
+  </defs>
+</svg>
