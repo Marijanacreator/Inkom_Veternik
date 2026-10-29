@@ -34,16 +34,16 @@ desktop.addEventListener('change', closeMenu);
 // Product rail: native scroll remains available to touch, keyboard and no-JS visitors.
 const productTrack = document.querySelector('#product-track');
 if (productTrack) {
-  const previous = document.querySelector('[data-carousel-prev]');
-  const next = document.querySelector('[data-carousel-next]');
+  const previous = document.querySelectorAll('[data-carousel-prev]');
+  const next = document.querySelectorAll('[data-carousel-next]');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const updateButtons = () => {
-    previous.disabled = productTrack.scrollLeft < 2;
-    next.disabled = productTrack.scrollLeft + productTrack.clientWidth >= productTrack.scrollWidth - 2;
+    previous.forEach(button => button.disabled = productTrack.scrollLeft < 2);
+    next.forEach(button => button.disabled = productTrack.scrollLeft + productTrack.clientWidth >= productTrack.scrollWidth - 2);
   };
   const move = direction => productTrack.scrollBy({left: direction * (productTrack.querySelector('.product-card').getBoundingClientRect().width + parseFloat(getComputedStyle(productTrack).columnGap)), behavior: motion.matches ? 'auto' : 'smooth'});
-  previous.addEventListener('click', () => move(-1));
-  next.addEventListener('click', () => move(1));
+  previous.forEach(button => button.addEventListener('click', () => move(-1)));
+  next.forEach(button => button.addEventListener('click', () => move(1)));
   productTrack.addEventListener('scroll', updateButtons, {passive:true});
   new ResizeObserver(updateButtons).observe(productTrack);
   updateButtons();
@@ -57,4 +57,17 @@ if (location.pathname.endsWith('/resenja.html')) {
   };
   window.addEventListener('hashchange', followRelocatedTopic);
   followRelocatedTopic();
+}
+
+// Local-page return control for long category and catalog pages.
+const backToTop = document.querySelector('.back-to-top');
+if (backToTop) {
+  const updateTopControl = () => { backToTop.hidden = window.scrollY < 480; };
+  window.addEventListener('scroll', updateTopControl, {passive: true});
+  updateTopControl();
+  backToTop.addEventListener('click', () => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top: 0, behavior: reduced ? 'instant' : 'smooth'});
+    document.querySelector('.header .wordmark').focus({preventScroll: true});
+  });
 }
