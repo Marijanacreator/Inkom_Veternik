@@ -179,3 +179,122 @@ html{overflow-x:clip}.logo-viessmann img{width:135px;height:44px;object-fit:cove
 @media(max-width:700px){.footer-columns li{margin:0!important}}
 
 @media(max-width:600px){.hero--overlay:not(.hero--equipment) .hero-backdrop{mask-image:linear-gradient(to bottom,transparent,#000 28px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 28px)}}
+
+/* Footer: progressive, accessible mobile accordions; desktop columns retained. */
+.footer-company-logo,.footer-top-slot,.footer-toggle{display:none}
+.footer-heading-label[hidden],.footer-toggle[hidden],.footer-panel[hidden]{display:none!important}
+.footer-phones{display:flex;flex-direction:column}.footer-directory{position:relative}
+@media(max-width:767px){
+ .footer-directory{padding:32px 0 24px;background:var(--white)}
+ .footer-directory>.container{width:calc(100% - 48px);margin-inline:auto}
+ .footer-directory .footer-columns{display:flex;flex-direction:column;gap:0;padding:0}
+ .footer-directory .footer-columns>.footer-company{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:0 0 24px}
+ .footer-directory .footer-company-name{display:none}
+ .footer-directory .footer-company-logo{display:inline-flex;align-items:center;font-size:26px;line-height:1;letter-spacing:-1px;min-height:32px;margin:0 0 16px}
+ .footer-company-logo .logo-symbol{height:24px}.footer-company-logo .doo{font-size:8px;letter-spacing:1px}
+ .footer-directory .footer-company>ul{display:flex;gap:24px;margin:0 0 8px;order:4}
+ .footer-directory .footer-company>ul a{min-height:44px;font-size:15px;padding:8px 0;align-items:center}
+ .footer-directory .footer-address{display:flex;align-items:flex-start;gap:8px;margin:0 0 8px;padding:0;color:var(--muted);font-size:15px;line-height:1.6}
+ .footer-directory .footer-address .contact-icon{margin-top:4px;flex:0 0 16px;width:16px;height:16px}
+ .footer-directory .footer-phones{display:flex;flex-direction:column;gap:0;margin:0 0 8px;width:100%}
+ .footer-directory .footer-phones .footer-phone{display:flex;gap:8px;align-items:center;min-height:44px;margin:0;font-size:16px;line-height:1.5;white-space:nowrap;padding:0}
+ .footer-directory .footer-columns>nav{display:block;margin:0;padding:0;border-top:1px solid var(--line)}
+ .footer-directory .footer-columns>nav:last-child{border-bottom:1px solid var(--line)}
+ .footer-directory .footer-columns>nav h2{font-size:17px;font-weight:600;line-height:1.4;letter-spacing:0;margin:0}
+ .footer-directory .footer-toggle:not([hidden]){display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:56px;padding:16px 0;margin:0;border:0;border-radius:0;background:transparent;text-align:left;font-size:17px;line-height:24px;font-weight:600}
+ .footer-toggle svg{width:20px;height:20px;flex:0 0 20px;color:var(--muted)}
+ .footer-toggle[aria-expanded="true"] .footer-toggle-vertical{display:none}
+ .footer-directory .footer-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ .footer-directory .footer-columns>nav .footer-panel{display:flex;flex-direction:column;gap:0;padding:0 0 16px;margin:0;list-style:none}
+ .footer-directory .footer-panel li{margin:0!important;padding:0}
+ .footer-directory .footer-panel li>a{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 0;font-size:15px;line-height:24px;color:var(--ink)}
+ .footer-directory .footer-panel a:before{width:5px;height:5px;flex-basis:5px;color:var(--muted)}
+ .footer-directory .footer-legal{display:grid;grid-template-columns:minmax(0,1fr) 44px;align-items:center;gap:16px;border-top:0;margin:0;padding:24px 0 0;text-align:left}
+ .footer-directory .footer-legal>.wordmark,.footer-directory .footer-top-link{display:none}
+ .footer-directory .footer-legal>p{grid-column:1;grid-row:1;order:0;font-size:12px;line-height:20px;margin:0;letter-spacing:0;max-width:32ch;color:var(--muted)}
+ .footer-top-slot{display:block;grid-column:2;grid-row:1;position:relative;width:44px;height:44px}
+ .back-to-top:not([hidden]){display:flex;position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));width:44px;height:44px;align-items:center;justify-content:center;border:1px solid #ffffffb3;border-radius:50%;padding:0;background:var(--accent);color:white;box-shadow:0 4px 18px #102b4030;z-index:25}
+ .footer-in-view .footer-top-slot .back-to-top:not([hidden]){position:absolute;inset:0;margin:0;box-shadow:none}
+ .footer-in-view .header{transform:translateY(calc(-100% - 24px));pointer-events:none}
+ .footer-in-view .header:has(.menu-toggle[aria-expanded="true"]){transform:none;pointer-events:auto}
+}
+@media(max-width:359px){.footer-directory>.container{width:calc(100% - 40px)}.footer-directory .footer-company>ul{gap:20px}}
+
+/* Green programme hero: compact, content-led mobile and tablet layout. */
+@media (max-width: 900px) {
+ .programme-hero{height:auto;min-height:0}
+ .programme-hero .programme-hero-copy{width:calc(100% - 48px);height:auto;min-height:0;padding:48px 0;align-items:flex-start;justify-content:flex-start;text-align:left}
+ .programme-hero .eyebrow{max-width:100%;margin:0 0 20px;font-size:10px;line-height:1.6;letter-spacing:1px}
+ .programme-hero h1{max-width:680px;margin:0;font-size:clamp(36px,4.8vw,48px);line-height:1.12;letter-spacing:-1.2px;text-wrap:initial;overflow-wrap:normal}
+ .programme-hero-copy>p:not(.eyebrow){max-width:600px;margin:24px 0 0;font-size:16px;line-height:1.5}
+ .programme-hero .actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:100%;margin:28px 0 0}
+ .programme-hero .actions>a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin:0;padding:12px 24px;font-size:15px;line-height:24px;text-align:center}
+ .programme-hero .actions>.hero-contact{border:1px solid #ffffff80;border-radius:999px;color:#fff}
+ .programme-hero>img{object-position:58% center}
+ .programme-hero-shade{background:linear-gradient(90deg,rgba(10,25,38,.74),rgba(10,25,38,.36))}
+}
+@media (max-width:767px) {
+ .programme-hero .programme-hero-copy{padding-block:40px}
+ .programme-hero h1{font-size:clamp(36px,10vw,42px)}
+ .programme-hero-copy>p:not(.eyebrow){margin-top:20px}
+ .programme-hero .actions{margin-top:24px}
+}
+@media (max-width:359px) {
+ .programme-hero .programme-hero-copy{width:calc(100% - 40px)}
+}
+
+/* Compact equipment navigation on small screens; desktop stays inline. */
+.programme-equipment-links .equipment-link-arrow{display:none}
+@media(max-width:767px){
+ .programme-equipment-links{display:flex;flex-direction:column;align-items:stretch;gap:0;margin-top:24px}
+ .programme-equipment-links .text-link{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;min-height:48px;padding:12px 0;font-size:16px;line-height:24px;border-bottom:1px solid var(--line)}
+ .programme-equipment-links .equipment-link-arrow{display:block;flex:0 0 18px;width:18px;height:18px}
+}
+
+/* Mobile contact: compact editorial layout, shared desktop rules untouched. */
+@media(max-width:767px){
+ .contact{padding-block:40px;scroll-margin-top:104px}
+ .contact>.container{width:calc(100% - 48px)}
+ .contact .contact-heading{display:block}
+ .contact .contact-heading .eyebrow{margin:0 0 16px}
+ .contact .contact-dot{display:none}
+ .contact .contact-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:0}
+ .contact h2{font-size:clamp(28px,7.5vw,34px);line-height:1.15;letter-spacing:-.8px;max-width:560px}
+ .contact-layout>div>p{margin:16px 0 24px;font-size:16px;line-height:1.5;color:#cedbe5}
+ .contact-layout>div>.button{min-height:48px;padding:12px 24px;font-size:15px;line-height:24px}
+ .contact .contact-information{display:grid;grid-template-columns:minmax(0,1fr);gap:0;max-width:none}
+ .contact-information>div{padding:24px 0;border-top:1px solid #ffffff30}
+ .contact-information>div:last-child{padding-bottom:0}
+ .contact .contact-information .tiny-label{font-size:10px;line-height:16px;letter-spacing:1px;color:#b7c8d5;margin:0 0 8px}
+ .contact-information a[href^="tel:"]{min-height:44px;font-size:16px;line-height:24px;white-space:nowrap}
+ .contact .contact-information address{font-size:16px;line-height:1.5}
+ .contact .contact-information .map-link{display:flex;align-items:center;gap:6px;min-height:44px;margin-top:4px;font-size:15px;line-height:24px;color:#8ed3e0}
+ .contact .working-hours{grid-column:1;padding-top:24px}
+ .contact .working-hours dl{max-width:none}
+ .contact .working-hours dl>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding-block:4px;font-size:15px;line-height:24px}
+ .contact .working-hours dd{text-align:right;white-space:nowrap}
+ .contact .working-hours p{margin-top:12px;font-size:12px;line-height:20px;color:#b7c8d5}
+ .contact-in-view:not(.footer-in-view) .back-to-top{visibility:hidden;pointer-events:none}
+}
+@media(max-width:359px){.contact>.container{width:calc(100% - 40px)}}
+
+/* Homepage mobile editorial hero: headline, equipment, then concise actions. */
+@media(max-width:767px){
+ #pocetna.hero.hero--overlay:not(.hero--equipment){display:grid;grid-template-columns:minmax(0,1fr);height:auto;min-height:0;padding:32px 24px;background:var(--white);color:var(--ink);gap:0;isolation:isolate}
+ #pocetna .hero-inner,#pocetna .hero-copy{display:contents}
+ #pocetna .hero-shade{display:none}
+ #pocetna .eyebrow{grid-row:1;margin:0 0 16px;font-size:10px;line-height:16px;letter-spacing:1.2px;color:var(--accent)}
+ #pocetna.hero h1{grid-row:2;margin:0 0 24px;font-size:clamp(42px,11.5vw,50px);line-height:1.03;letter-spacing:-1.8px;color:var(--ink)}
+ #pocetna .hero-backdrop{grid-row:3;position:relative;inset:auto;order:initial;z-index:auto;width:calc(100% + 48px);max-width:none;height:auto;aspect-ratio:1.6;object-fit:cover;object-position:100% 57%;margin:0 -24px;mask-image:none;-webkit-mask-image:none}
+ #pocetna .hero-description{grid-row:4;margin:24px 0 0;font-size:16px;line-height:1.5;color:var(--muted)}
+ #pocetna .actions{grid-row:5;display:flex;flex-direction:column;align-items:flex-start;width:100%;gap:8px;margin:24px 0 0}
+ #pocetna .actions .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;font-size:14px;line-height:24px}
+ #pocetna .actions .hero-contact{display:inline-flex;align-items:center;justify-content:flex-start;align-self:flex-start;width:auto;min-height:44px;padding:8px 0;font-size:14px;line-height:24px;text-align:left;color:var(--ink)}
+}
+@media(max-width:359px){#pocetna.hero.hero--overlay:not(.hero--equipment){padding-inline:20px}#pocetna .hero-backdrop{width:calc(100% + 40px);margin-inline:-20px}}
+
+/* Align the text inset of paired mobile actions, including outlined links. */
+@media(max-width:767px){
+ .actions>a.button,.actions>a.hero-contact,#pocetna .actions .button,#pocetna .actions .hero-contact,.programme-hero .actions>a{justify-content:flex-start;text-align:left;padding-inline:24px;box-sizing:border-box}
+ .programme-hero .actions>.hero-contact{padding-inline:23px}
+}

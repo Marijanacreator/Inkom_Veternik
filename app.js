@@ -71,3 +71,42 @@ if (backToTop) {
     document.querySelector('.header .wordmark').focus({preventScroll: true});
   });
 }
+
+// One navigation markup: expanded columns on desktop, button accordions on phones.
+const footer = document.querySelector('#site-footer');
+if (footer) {
+  const footerMobile = window.matchMedia('(max-width: 767px)');
+  const toggles = [...footer.querySelectorAll('.footer-toggle')];
+  const syncFooterNavigation = () => {
+    toggles.forEach(button => {
+      const panel = document.getElementById(button.getAttribute('aria-controls'));
+      button.hidden = !footerMobile.matches;
+      button.previousElementSibling.hidden = footerMobile.matches;
+      button.setAttribute('aria-expanded', 'false');
+      panel.hidden = footerMobile.matches;
+    });
+  };
+  toggles.forEach(button => button.addEventListener('click', () => {
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!expanded));
+    document.getElementById(button.getAttribute('aria-controls')).hidden = expanded;
+  }));
+  footerMobile.addEventListener('change', syncFooterNavigation);
+  syncFooterNavigation();
+  // Transforming the header and positioning the return button in its reserved
+  // footer slot avoid both viewport obstruction and document layout shifts.
+  if ('IntersectionObserver' in window) {
+    const footerObserver = new IntersectionObserver(entries => {
+      document.body.classList.toggle('footer-in-view', entries[0].isIntersecting);
+    });
+    footerObserver.observe(footer);
+  }
+}
+
+// Keep the floating control clear of the mobile contact information.
+const contactSection = document.querySelector('.contact#kontakt');
+if (contactSection && 'IntersectionObserver' in window) {
+  new IntersectionObserver(entries => {
+    document.body.classList.toggle('contact-in-view', entries[0].isIntersecting);
+  }).observe(contactSection);
+}
