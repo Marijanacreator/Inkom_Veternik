@@ -278,23 +278,39 @@ html{overflow-x:clip}.logo-viessmann img{width:135px;height:44px;object-fit:cove
 }
 @media(max-width:359px){.contact>.container{width:calc(100% - 40px)}}
 
-/* Homepage mobile editorial hero: headline, equipment, then concise actions. */
-@media(max-width:767px){
- #pocetna.hero.hero--overlay:not(.hero--equipment){display:grid;grid-template-columns:minmax(0,1fr);height:auto;min-height:0;padding:32px 24px;background:var(--white);color:var(--ink);gap:0;isolation:isolate}
- #pocetna .hero-inner,#pocetna .hero-copy{display:contents}
- #pocetna .hero-shade{display:none}
- #pocetna .eyebrow{grid-row:1;margin:0 0 16px;font-size:10px;line-height:16px;letter-spacing:1.2px;color:var(--accent)}
- #pocetna.hero h1{grid-row:2;margin:0 0 24px;font-size:clamp(42px,11.5vw,50px);line-height:1.03;letter-spacing:-1.8px;color:var(--ink)}
- #pocetna .hero-backdrop{grid-row:3;position:relative;inset:auto;order:initial;z-index:auto;width:calc(100% + 48px);max-width:none;height:auto;aspect-ratio:1.6;object-fit:cover;object-position:100% 57%;margin:0 -24px;mask-image:none;-webkit-mask-image:none}
- #pocetna .hero-description{grid-row:4;margin:24px 0 0;font-size:16px;line-height:1.5;color:var(--muted)}
- #pocetna .actions{grid-row:5;display:flex;flex-direction:column;align-items:flex-start;width:100%;gap:8px;margin:24px 0 0}
- #pocetna .actions .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;font-size:14px;line-height:24px}
- #pocetna .actions .hero-contact{display:inline-flex;align-items:center;justify-content:flex-start;align-self:flex-start;width:auto;min-height:44px;padding:8px 0;font-size:14px;line-height:24px;text-align:left;color:var(--ink)}
-}
-@media(max-width:359px){#pocetna.hero.hero--overlay:not(.hero--equipment){padding-inline:20px}#pocetna .hero-backdrop{width:calc(100% + 40px);margin-inline:-20px}}
-
 /* Align the text inset of paired mobile actions, including outlined links. */
 @media(max-width:767px){
  .actions>a.button,.actions>a.hero-contact,#pocetna .actions .button,#pocetna .actions .hero-contact,.programme-hero .actions>a{justify-content:flex-start;text-align:left;padding-inline:24px;box-sizing:border-box}
  .programme-hero .actions>.hero-contact{padding-inline:23px}
+}
+
+/* Mobile homepage: restore the original photographic overlay composition. */
+#pocetna .hero-photo{display:contents}
+@media(max-width:767px){
+ #pocetna.hero.hero--overlay:not(.hero--equipment){display:block;position:relative;isolation:isolate;height:auto;min-height:0;padding:0;background:#172b40;color:#fff;overflow:hidden}
+ #pocetna .hero-photo{display:contents}
+ #pocetna .hero-backdrop{position:absolute;inset:0;width:100%;max-width:none;height:100%;aspect-ratio:auto;object-fit:cover;object-position:83% 42%;margin:0;mask-image:none;-webkit-mask-image:none;z-index:-2}
+ #pocetna .hero-shade{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:-1;background:linear-gradient(90deg,rgba(10,25,38,.76),rgba(10,25,38,.36))}
+ #pocetna .hero-inner{display:block;width:calc(100% - 48px);height:auto;padding:100px 0 64px}
+ #pocetna .hero-copy{display:block;width:100%;max-width:none;padding:0}
+ #pocetna .eyebrow{margin:0 0 24px;font-size:10px;line-height:16px;letter-spacing:1.5px;color:#fff}
+ #pocetna.hero h1{margin:0;font-size:clamp(44px,12vw,54px);line-height:1.04;letter-spacing:-1.8px;color:#fff}
+ #pocetna .hero-description{margin:28px 0 0;font-size:17px;line-height:1.55;color:#e4edf3}
+ #pocetna .actions{display:flex;flex-direction:column;align-items:center;width:100%;gap:12px;margin:28px 0 0}
+ #pocetna .actions .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;font-size:14px;line-height:24px;text-align:center}
+ #pocetna .actions .hero-contact{display:inline-flex;align-items:center;justify-content:center;align-self:center;width:auto;min-height:44px;padding:8px 24px;font-size:14px;line-height:24px;text-align:center;color:#fff}
+}
+@media(max-width:359px){#pocetna .hero-inner{width:calc(100% - 40px);padding-block:80px 48px}}
+
+/* One left alignment axis for the mobile homepage content and actions. */
+@media(max-width:767px){
+ #pocetna .actions{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+ #pocetna .actions>.button{align-self:flex-start;margin-inline:0}
+ #pocetna .actions>.hero-contact{align-self:flex-start;justify-content:flex-start;margin-inline:0;padding-inline:0;text-align:left}
+}
+
+/* Optical alignment of the mobile hero label and paired CTA text. */
+@media(max-width:767px){
+ #pocetna .eyebrow{margin-left:3px}
+ #pocetna .actions>.hero-contact{padding-inline:24px}
 }
