@@ -314,3 +314,83 @@ html{overflow-x:clip}.logo-viessmann img{width:135px;height:44px;object-fit:cove
  #pocetna .eyebrow{margin-left:3px}
  #pocetna .actions>.hero-contact{padding-inline:24px}
 }
+
+/* Shared internal-page mobile system. Desktop rules remain authoritative >=768px. */
+@media(max-width:767px){
+ .internal-page{--gutter:24px;--space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-section:48px}
+ .internal-page main .container{width:calc(100% - 2*var(--gutter))}
+ .internal-page main h1{font-size:clamp(36px,9.6vw,46px);line-height:1.1;letter-spacing:-1.4px}
+ .internal-page main h2{font-size:clamp(30px,7.7vw,36px);line-height:1.15;letter-spacing:-1px;text-align:left}
+ .internal-page main h3{line-height:1.2}
+ .internal-page main .eyebrow{margin-bottom:var(--space-2);line-height:1.6;letter-spacing:1.4px}
+ .internal-page main .section,.internal-page .guide-hero,.internal-page .guide-section,.internal-page .category-models,.internal-page .system-control,.internal-page .heat-guide,.internal-page .application-section,.internal-page .green-principles,.internal-page .finance-process,.internal-page .guide-cta{padding-block:var(--space-section)}
+ .internal-page main .section-heading{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-2);margin-bottom:var(--space-4)}
+ .internal-page main .section-intro{max-width:60ch;margin:0;font-size:16px;line-height:1.6}
+ .internal-page .guide-lead{margin-top:var(--space-3);font-size:16px;line-height:1.6}
+ .internal-page .guide-topics{gap:8px 24px;margin-top:var(--space-3)}
+ .internal-page .guide-topics a{display:inline-flex;align-items:center;min-height:44px}
+ .internal-page .breadcrumbs{flex-wrap:wrap;gap:8px 12px;padding-top:var(--space-3);font-size:12px;line-height:1.5}
+ .internal-page :is(.guide-section,.guide-columns,.category-considerations,.category-next,.system-photo-feature,.photo-energy-paths,.heat-types,.application-steps,.source-diagrams,.energy-explainer,.green-pillars,.finance-columns,.programme-equipment-feature,.heat-principle-editorial,.saving-comparison,.product-detail){grid-template-columns:minmax(0,1fr);gap:var(--space-3)}
+ .internal-page :is(.guide-section,.category-next,.category-considerations,.system-photo-feature,.photo-energy-paths,.guide-columns)>*{min-width:0;text-align:left}
+ .internal-page .category-next{gap:var(--space-3)}
+ .internal-page .category-next>div:last-child{padding:var(--space-3) 0 0;border:0;border-top:1px solid var(--line)}
+ .internal-page .category-next h3{font-size:26px;margin-bottom:var(--space-2)}
+ .internal-page .category-next p:not(.eyebrow){margin-bottom:var(--space-3);font-size:16px;line-height:1.5}
+ .internal-page .category-next .text-link{margin-top:var(--space-1)}
+ .internal-page .category-next+.footer-directory{padding-top:var(--space-4)}
+ .internal-page .decision-map{grid-template-columns:minmax(0,1fr);gap:var(--space-3);align-items:start;margin-inline:calc(-1*var(--gutter));padding:var(--space-3) var(--gutter)}
+ .internal-page .decision-map>*{grid-column:1;min-width:0}
+ .internal-page .decision-scene{grid-row:1;max-height:200px;width:100%;object-fit:contain}
+ .internal-page .decision-side{padding-top:var(--space-3);border-top:1px solid var(--line)}
+ .internal-page .decision-side .tiny-label,.internal-page .decision-inputs .tiny-label{margin-bottom:var(--space-1);font-size:10px}
+ .internal-page .decision-side h3,.internal-page .decision-inputs h3{font-size:24px;margin-bottom:var(--space-2)}
+ .internal-page .decision-side li{font-size:15px;line-height:24px;padding-block:var(--space-1)}
+ .internal-page .decision-inputs{grid-template-columns:minmax(0,1fr);gap:0;padding-top:var(--space-3)}
+ .internal-page .decision-inputs ul{grid-template-columns:minmax(0,1fr);gap:0}
+ .internal-page .decision-inputs li{font-size:15px;line-height:24px;padding:12px 0;border-top:1px solid var(--line)}
+ .internal-page .decision-map figcaption{padding-top:var(--space-2);font-size:13px;line-height:1.6}
+ .internal-page .category-model-grid,.internal-page .category-model-grid--four{grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
+ .internal-page .category-model-grid .category-model>div{height:auto;aspect-ratio:1.15;margin-bottom:var(--space-2)}
+ .internal-page .category-model-grid .category-model h3{font-size:24px;margin-bottom:var(--space-1)}
+ .internal-page .category-model-grid .category-model>.tiny-label{font-size:10px}
+ .internal-page .category-model-grid .category-model>p:last-child{font-size:14px}
+ .internal-page .product-detail{padding-block:var(--space-section)}
+ .internal-page .product-detail h2{margin-bottom:var(--space-2)}
+ .internal-page .product-detail-visual{min-height:0}
+ .internal-page .product-detail-visual img{max-height:340px}
+ .internal-page .product-detail-visual>.product-photo-placeholder{min-height:260px}
+ .internal-page .product-data>div{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-2);font-size:13px}
+ .internal-page .catalog-brands{grid-template-columns:minmax(0,1fr);gap:var(--space-2)}
+ .internal-page .catalog-brands .catalog-brand{display:grid;grid-template-columns:100px minmax(0,1fr);grid-template-rows:auto auto;gap:8px 16px;padding:var(--space-2)}
+ .internal-page .catalog-brands .catalog-logo{grid-column:1;grid-row:1/3;width:100px;height:64px;align-self:center}
+ .internal-page .catalog-brands .catalog-brand h2{grid-column:2;min-height:0;align-self:end;font-size:21px}
+ .internal-page .catalog-brands .catalog-brand p{grid-column:2;font-size:13px;line-height:1.5}
+ .internal-page .catalog-group-heading{padding-block:var(--space-4)}
+ .internal-page .green-pillars{margin-top:var(--space-4)}
+ .internal-page .green-pillars article{display:block;grid-template-columns:none;text-align:left;padding-top:var(--space-3)}
+ .internal-page .green-pillars .green-pillar-icon{margin:0 0 var(--space-2);height:64px;width:100px}
+ .internal-page .green-pillars article:first-child .green-pillar-icon{width:44px}
+ .internal-page .green-pillars article p{margin:0;max-width:60ch}
+ .internal-page .programme-equipment-feature{margin-top:var(--space-4)}
+ .internal-page .programme-equipment-feature h3{font-size:28px;margin:var(--space-2) 0}
+ .internal-page .programme-equipment-feature p:not(.tiny-label){margin-bottom:var(--space-3);line-height:1.6}
+ .internal-page .photo-path-copy{padding-top:var(--space-3)}
+ .internal-page .photo-path-copy h3{font-size:26px;margin:var(--space-2) 0}
+ .internal-page .control-connection{gap:12px;margin-block:var(--space-3);padding-block:var(--space-2)}
+ .internal-page .guide-cta>.container{flex-direction:column;align-items:flex-start;gap:var(--space-3)}
+ .internal-page .guide-cta p:not(.eyebrow){margin-top:var(--space-2)}
+ .internal-page .finance-columns{margin-top:var(--space-4)}
+ .internal-page .finance-columns li>span{margin-bottom:var(--space-2)}
+ .internal-page .finance-columns h3{margin-bottom:var(--space-2)}
+ .internal-page .category-page-copy{min-height:0;padding-block:56px}
+ .internal-page .category-page-hero{height:auto;min-height:0}
+ .internal-page .category-page-copy>p:not(.eyebrow){margin:var(--space-3) 0;font-size:16px;line-height:1.6}
+ .internal-page .category-page-hero--product{padding-bottom:260px}
+ .internal-page .category-page-hero--product>img{height:260px}
+ .internal-page .category-page-hero--product .category-page-copy{min-height:0;padding-block:48px 24px}
+ .internal-page .heat-principle-editorial{padding-block:8px 32px}
+ .internal-page .energy-explainer{padding:var(--space-3)}
+}
+@media(max-width:359px){.internal-page{--gutter:20px}}
+
+@media(max-width:767px){.internal-page.btt-overlaps-control:not(.footer-in-view) .back-to-top{visibility:hidden;pointer-events:none}}

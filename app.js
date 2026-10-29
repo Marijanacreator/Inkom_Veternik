@@ -110,3 +110,30 @@ if (contactSection && 'IntersectionObserver' in window) {
     document.body.classList.toggle('contact-in-view', entries[0].isIntersecting);
   }).observe(contactSection);
 }
+
+// On internal pages, never float the return control over another touch target.
+if (document.body.classList.contains('internal-page')) {
+  const returnControl = document.querySelector('.back-to-top');
+  const contentControls = [...document.querySelectorAll('main a, main button, main summary')];
+  const smallScreen = window.matchMedia('(max-width: 767px)');
+  let overlapFrame = 0;
+  const checkReturnControl = () => {
+    overlapFrame = 0;
+    let overlaps = false;
+    if (smallScreen.matches && returnControl && !returnControl.hidden && !document.body.classList.contains('footer-in-view')) {
+      const buttonBox = returnControl.getBoundingClientRect();
+      overlaps = contentControls.some(control => {
+        const box = control.getBoundingClientRect();
+        return box.width > 0 && box.height > 0 && box.left < buttonBox.right && box.right > buttonBox.left && box.top < buttonBox.bottom && box.bottom > buttonBox.top;
+      });
+    }
+    document.body.classList.toggle('btt-overlaps-control', overlaps);
+  };
+  const scheduleReturnCheck = () => {
+    if (!overlapFrame) overlapFrame = window.requestAnimationFrame(checkReturnControl);
+  };
+  window.addEventListener('scroll', scheduleReturnCheck, { passive: true });
+  window.addEventListener('resize', scheduleReturnCheck, { passive: true });
+  document.addEventListener('toggle', scheduleReturnCheck, true);
+  scheduleReturnCheck();
+}
